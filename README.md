@@ -26,7 +26,9 @@
 
 ## Installation
 
-`pip install -r requirements.txt`
+Clone repository.
+
+Run `pip install -r requirements.txt` inside project root folder.
 
 Put membership csv in project root directory as file named the value of `MEMBER_FILE_NAME` in config.py (defaults to `members.csv`)
 ## Running
