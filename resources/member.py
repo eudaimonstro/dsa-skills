@@ -32,7 +32,7 @@ class Member(Resource):
     def get(self, id):
         member_data = MemberModel.find_by_id(id)
         if member_data:
-            return member_data.json()
+            return member_data.json(), 200
         return {'message': MEMBER_NOT_FOUND}, 404
 
     @member_ns.doc('update_member')
@@ -93,7 +93,7 @@ class MemberList(Resource):
             member_list = MemberModel.find_all(args['order'], args['invert'])
         else:
             member_list = MemberModel.find_all()
-        return member_list
+        return member_list, 200
 
     @members_ns.doc('create_member')
     def post(self):

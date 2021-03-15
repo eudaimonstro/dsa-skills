@@ -45,23 +45,23 @@ Call `GET localhost/api/members` to get a list of all members.
 
 - Add query parameters `?sort_by=True&order={first_name|last_name}` to sort by first or last name. Add parameter `&inverse=True` to sort descending.
 
-- Returns a list of member json objects.
+- Returns a list of member json objects and http response status code.
 
 Call `POST localhost/api/members` to create new member (attach data as json object)
 
-- Returns member json object.
+- Returns member json object and http response status code.
 
 Call `GET localhost:5000/api/member/{id}` to retrieve member with known id (replace {id}).
 
-- Returns member json object.
+- Returns member json object and http response status code.
 
 Call `PUT localhost:5000/api/member/{id}` to update member with known id (replace {id} and attach data as json object).
 
-- Returns member json object.
+- Returns member json object and http response status code.
 
 Call `DELETE localhost:5000/api/member/{id}` to delete member with known id (replace {id}).
 
-- Returns message: Member Deleted successfully if successfully deleted.
+- Returns message: Member Deleted successfully if successfully deleted and http response status code.
 
 Enter chapter name in input box and submit in order to filter by chapter.
 
