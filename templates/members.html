@@ -1,0 +1,36 @@
+{% extends 'layouts/app.html' %}
+
+{% block content %}
+
+<form method='POST'>
+    <label for="filter"></label><input type="text" name="filter">
+    <input type="submit" name="submit">
+</form>
+
+<table class="sortable">
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Profile Pic</th>
+        <th>Dues Paid</th>
+        <th>Last Dues Payment</th>
+        <th>Chapter Name</th>
+    </tr>
+    {% for member in members %}
+    <tr>
+        <td>{{member.id}}</td>
+        <td>{{member.first_name}}</td>
+        <td>{{member.last_name}}</td>
+        <td>{{member.email}}</td>
+        <td>
+            <img src="{{member.profile_image}}" alt="profile picture" />
+        </td>
+        <td>{{member.dues_paid}}</td>
+        <td>{{member.last_dues_payment}}</td>
+        <td>{{member.chapter_name}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
