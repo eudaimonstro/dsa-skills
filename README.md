@@ -66,3 +66,11 @@ Call `DELETE localhost:5000/api/member/{id}` to delete member with known id (rep
 Enter chapter name in input box and submit in order to filter by chapter.
 
 Click column headers to sort by header.
+
+# Questions
+
+If you had multiple days to work on this, what improvements would you make and why? 
+- I would enhance the code in a couple ways. First, I would add an authentication system to ensure that only authenticated users are allowed to access the endpoints. Next, I would create tests around each endpoint to ensure that the api remains healthy. I would also build out an error handling / logging system to quickly identify where in the code bugs appear, instead of relying on http status codes to determine if the correct code path is being followed. Additionally, adding type hints helps readability and maintainability to a project, so I would type all appropriate variables and properties. Finally, I would document the endpoints more thoroughly, recording things like the shape of each return object and all possible status code responses.
+
+What follow-up features would you add?
+- This depends entirely on the requirements of the project. If the project only calls for the creation of a membership api to be consumed by all external programs, regardless of things like authentication, then this code is sufficient to meet those needs and more features would only add technical debt and code that needs to be maintained. If the project owners/managers decided that additional requirements like authentication, a way for a member to update only their information, or for chapters to be able to access only those members who belong to their chapter, then those would be features I would implement. Regardless of those requirement considerations, I would absolutely migrate to a more robust database, as maintaining data in a csv file (or a sqlite database, used in my implementation) is not the most practical and scalable solution.
