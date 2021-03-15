@@ -93,7 +93,7 @@ class MemberList(Resource):
             member_list = MemberModel.find_all(args['order'], args['invert'])
         else:
             member_list = MemberModel.find_all()
-        return member_list, 200
+        return list(member_list), 200
 
     @members_ns.doc('create_member')
     def post(self):
